@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const apiRoutes = {
-    achievement: api_routes.achievement
-} = require('../constants')
+const {
+    achievement
+} = require('../constants').api_routes
 
 const AchievementController = require('../controllers/achievementController');
 
-router.get(apiRoutes.achievement.get_achievement, AchievementController.getAchievement());
-router.post(apiRoutes.achievement.post_achievement, AchievementController.postAchievement());
+router.get(achievement.get_achievement, AchievementController.getAchievement());
+router.post(achievement.post_achievement, AchievementController.postAchievement());
 
 module.exports = router;

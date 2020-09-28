@@ -1,27 +1,22 @@
-require('./database/config');
-const {
-    constants:
-    {
-        endpoint: end_point
-    }
-} = require('./constants');
-
+//require('./database/config');
+const {end_point}  = require('./constants');
 const chalk = require('chalk');
-const cors = reqiore('cors');
+const cors = require('cors');
 
 const express = require('express');
 const app = express();
 
 const helmet = require('helmet')
 const bodyParser = require('body-parser');
-const constants = require('./constants');
 
 
 app.use(helmet());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors());
 
 const router = express.Router();
-app.use(constants.endpoint, router);
+app.use(end_point, router);
 require('./routes')(router);
 
 //Handling Error

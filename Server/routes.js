@@ -1,25 +1,21 @@
-const apiRoutes = {
-    education: api_routes.education.end_point,
-    experience: api_routes.experience.end_point,
-    profile: api_routes.profile.end_point,
-    project: api_routes.project.end_point,
-    achievement: api_routes.achievement.end_point,
+const {
+    api_routes
 } = require('./constants')
 
 module.exports = function (app) {
     const education = require('./routes/educationRoute')
-    app.use(apiRoutes.education, education)
+    app.use(api_routes.education.end_point, education)
 
     const experience = require('./routes/experienceRoute')
-    app.use(apiRoutes.experience, experience)
+    app.use(api_routes.experience.end_point, experience)
 
     const profile = require('./routes/profileRoute')
-    app.use(apiRoutes.profile, profile)
+    app.use(api_routes.profile.end_point, profile)
 
     const project = require('./routes/projectRoute');
-    app.use(apiRoutes.projects, project)
+    app.use(api_routes.projects.end_point, project)
 
     const achievement = require('./routes/achievementRoute')
-    app.use(apiRoutes.achievement, achievement)
+    app.use(api_routes.achievement.end_point, achievement)
 
 }
