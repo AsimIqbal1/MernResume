@@ -1,5 +1,9 @@
-const {
-    apiRoutes: api_routes
+const apiRoutes = {
+    education: api_routes.education.end_point,
+    experience: api_routes.experience.end_point,
+    profile: api_routes.profile.end_point,
+    project: api_routes.project.end_point,
+    achievement: api_routes.achievement.end_point,
 } = require('./constants')
 
 module.exports = function (app) {

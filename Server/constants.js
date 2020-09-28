@@ -1,10 +1,20 @@
 module.exports = {
     api_routes : {
-        education: '/education',
-        experience: '/experience',
-        profile: '/profile',
-        project: '/project',
-        achievement: '/achievement',
+        education: {
+            end_point: '/education'
+        },
+        experience: {
+            end_point: '/experience'
+        },
+        profile: {
+            end_point: '/profile'
+        },
+        project: {
+            end_point: '/project'
+        },
+        achievement: {
+            end_point: '/achievement'
+        },
     },
     end_point: '/api'
 }
