@@ -13,7 +13,7 @@ module.exports = function (app) {
     app.use(api_routes.profile.end_point, profile)
 
     const project = require('./routes/projectRoute');
-    app.use(api_routes.projects.end_point, project)
+    app.use(api_routes.project.end_point, project)
 
     const achievement = require('./routes/achievementRoute')
     app.use(api_routes.achievement.end_point, achievement)

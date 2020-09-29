@@ -1,4 +1,4 @@
-//require('./database/config');
+require('./database/config');
 const {end_point}  = require('./constants');
 const chalk = require('chalk');
 const cors = require('cors');
@@ -47,5 +47,5 @@ app.use((error, req, res, next) => {
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-    console.log(chalk.red.inverse("<<< Server Started at port 4000 >>>"))
+    console.log(chalk.red.inverse(`<<< Server Started at port  ${port}>>>`))
 });

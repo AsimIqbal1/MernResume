@@ -7,7 +7,7 @@ const {
 
 const EducationController = require('../controllers/educationController');
 
-router.get(education.get_education, EducationController.getEducation());
-router.post(education.post_education, EducationController.postEducation());
+router.get(education.get_education, EducationController.getEducation);
+router.post(education.post_education, EducationController.postEducation);
 
 module.exports = router;

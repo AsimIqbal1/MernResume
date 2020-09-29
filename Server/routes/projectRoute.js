@@ -7,7 +7,7 @@ const {
 
 const ProjectController = require('../controllers/projectController');
 
-router.get(project.get_project, ProjectController.getProject());
-router.post(project.post_project, ProjectController.postProject());
+router.get(project.get_project, ProjectController.getProject);
+router.post(project.post_project, ProjectController.postProject);
 
 module.exports = router;

@@ -7,7 +7,7 @@ const {
 
 const ExperienceController = require('../controllers/experienceController');
 
-router.get(experience.get_experience, ExperienceController.getExperience());
-router.post(experience.post_experience, ExperienceController.postExperience());
+router.get(experience.get_experience, ExperienceController.getExperience);
+router.post(experience.post_experience, ExperienceController.postExperience);
 
 module.exports = router;

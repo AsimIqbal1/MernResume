@@ -1,18 +1,16 @@
 const mongoose = require("mongoose");
 const chalk = require('chalk');
 
-mongoose.connect(process.env.MONGO_URL,
+mongoose.connect("mongodb+srv://asimiqbal1:asimiqbal1@cluster0.pesev.mongodb.net/MERN_RESUME?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
-    },
-    (error) => {
-        if (error) {
-            console.log("Error Connecting");
-        }
-        else {
-            console.log(chalk.green.inverse('<<<  Database connected  >>>'));
-        }
-    }
-)
+    });
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+    // we're connected!
+    console.log(chalk.green.inverse('<<<  Database connected  >>>'));
+});
