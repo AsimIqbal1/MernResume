@@ -33,6 +33,12 @@ const ProfileModel = new mongoose.Schema({
     },
     objective: {
         type: String
+    },
+    github: {
+        type: String
+    },
+    linkedIn: {
+        type: String
     }
 });
 

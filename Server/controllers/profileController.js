@@ -32,7 +32,9 @@ module.exports = {
                 development: req.body.development,
                 design: req.body.design,
                 interest: req.body.interest,
-                objective: req.body.objective
+                objective: req.body.objective,
+                github: req.body.github,
+                linkedIn: req.body.linkedIn
             }
 
             const profile = new Profile(postJSON);
