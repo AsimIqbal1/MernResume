@@ -2,6 +2,7 @@
 Server/node_modules
 Server/.env
 
+.env
 #client
 client/node_modules
 client/src/images
