@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const chalk = require('chalk');
 
-mongoose.connect("mongodb+srv://asimiqbal1:asimiqbal1@cluster0.pesev.mongodb.net/MERN_RESUME?retryWrites=true&w=majority",
+mongoose.connect(process.env.MONGO_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,

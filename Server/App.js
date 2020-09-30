@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 require('./database/config');
 const {end_point}  = require('./constants');
 const chalk = require('chalk');
