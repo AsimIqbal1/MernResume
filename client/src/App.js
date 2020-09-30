@@ -5,9 +5,7 @@ import Resume from './component/resume'
 function App() {
 
   return (
-    <div>
-      <Resume/>
-    </div>
+      <Resume style={{flex: 1}}/>
   );
 }
 

@@ -1,2 +1,7 @@
+#server
 Server/node_modules
 Server/.env
+
+#client
+client/node_modules
+client/src/images
